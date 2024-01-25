@@ -434,13 +434,10 @@ Appendices work just like regular sections. You can add figures, tables, etc.
 \label{app:backup}
 The cloud is wonderful until it goes ``poof''. Overleaf has some internal version control (see the ``History'' button), but I always make sure I have a backed up version of my projects on my laptop. This is great for a number of reasons including if I accidentally delete something or really screw something up (definitely been there...) or if I want to work on my document while I'm not online. An easy way to backup is to use \git\ (all credit to Peter Teuben for showing me this). 
 
-First, to create the link between your Overleaf project and computer, open a terminal and navigate to a directory where you want to store your backup. In Overleaf, click on ``Share'' and copy the read and edit link. In the terminal, type:\\
-{\fontfamily{cmtt}\selectfont git clone https://git.overleaf.com/19205845gqmwfqgjwnhb backup}\\
-where the copied link to the project is {\fontfamily{cmtt}\selectfont https://www.overleaf.com/19205845gqmwfqgjwnhb} and the ``{\fontfamily{cmtt}\selectfont www}'' is replaced with ``\git''. {\fontfamily{cmtt}\selectfont backup} is the name of a new directory that will be created; if {\fontfamily{cmtt}\selectfont backup} already exists, this command will fail. You only need to do this once per project. Then anytime you want to backup your project, simply\\
+First, to create the link between your Overleaf project and computer, open a terminal and navigate to a directory where you want to store your backup. In Overleaf, click on ``Menu'' then ``git" and copy the \texttt{git clone} line. Paste this in the terminal followed by {\fontfamily{cmtt}\selectfont backup}, where {backup} is the name of the directory to be created, and hit return. You only need to do this once per project. Then anytime you want to backup your project, simply\\
 {\fontfamily{cmtt}\selectfont cd backup\\
 git pull}\\
 Boom. Done. All backed up. All changes are updated, new files are added, and old files are deleted.
 
-\textbf{This is currently not supported with Overleaf v2 :(} Hopefully this comes back up soon because it is very, very nice. This will work with documents created under v1 and not yet exported to v2. In the mean time, for v2 files you can download the source (all files associated with this project) as a .zip file under Menu.
 
 \end{document}
